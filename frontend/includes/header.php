@@ -14,24 +14,20 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Agriculture Equipment Rental</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Material-Inspired Styles -->
+    <link href="/agriculture-equipment-rental/frontend/assets/css/style.css" rel="stylesheet">
     <style>
         body {
             padding-top: 56px;
-        }
-
-        .hero {
-            background: #f8f9fa;
-            padding: 4rem 1rem;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/agriculture-equipment-rental/index.php">AgriRental</a>
+            <a class="navbar-brand" href="/agriculture-equipment-rental/index.php">🌾 AgriRental</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,6 +38,8 @@ if (session_status() === PHP_SESSION_NONE) {
                     <li class="nav-item"><a class="nav-link"
                             href="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php">Browse
                             Equipment</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="/agriculture-equipment-rental/frontend/pages/about.php">About Us</a></li>
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
                             <li class="nav-item"><a class="nav-link"
@@ -63,7 +61,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <?php else: ?>
                         <li class="nav-item"><a class="nav-link"
                                 href="/agriculture-equipment-rental/frontend/pages/auth/login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-link"
+                        <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2"
                                 href="/agriculture-equipment-rental/frontend/pages/auth/register.php">Register</a></li>
                     <?php endif; ?>
                 </ul>
