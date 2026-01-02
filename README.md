@@ -21,5 +21,11 @@ Three-Tier Architecture:
 4. Configure `.env`
 5. Start Apache & MySQL
 
+## Documentation
+- [User Manual](docs/UserManual.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Database Schema](docs/DATABASE.md)
+- [Testing Guide](docs/TESTING.md)
+
 ## Status
-🚧 Under Development
+✅ Completed

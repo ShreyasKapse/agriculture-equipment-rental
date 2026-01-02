@@ -1,6 +1,9 @@
 <?php
 require_once 'backend/config/db.php';
 
+// ⚠️ SECURITY WARNING: Delete this file after initial setup!
+// This script creates an admin user with a known password. Leaving it accessible is a security risk.
+
 $email = 'admin@aers.com';
 $password = 'admin123';
 $hash = password_hash($password, PASSWORD_DEFAULT);
