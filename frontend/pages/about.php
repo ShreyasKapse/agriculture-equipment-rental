@@ -167,9 +167,9 @@ require_once '../includes/header.php';
                             👨‍🏫
                         </div>
                     </div>
-                    <h5 class="mb-1">[Guide Name]</h5>
-                    <p class="text-muted mb-2">[Designation]</p>
-                    <p class="small text-secondary">[Department]<br>[Your College Name]</p>
+                    <h5 class="mb-1">XYZ</h5>
+                    <p class="text-muted mb-2">Professor</p>
+                    <p class="small text-secondary">Computer Engineering<br>JSPM</p>
                 </div>
             </div>
         </div>
@@ -183,9 +183,9 @@ require_once '../includes/header.php';
             <div class="col-md-8 mx-auto text-center">
                 <div class="material-card-flat p-4">
                     <h5 class="mb-3">Academic Project</h5>
-                    <p class="mb-2"><strong>Academic Year:</strong> 2024-2025</p>
+                    <p class="mb-2"><strong>Academic Year:</strong> 2025-2026</p>
                     <p class="mb-2"><strong>Program:</strong> Diploma in Computer Engineering</p>
-                    <p class="mb-0"><strong>Institution:</strong> [Your Institute Name]</p>
+                    <p class="mb-0"><strong>Institution:</strong> JSPM</p>
                 </div>
             </div>
         </div>
