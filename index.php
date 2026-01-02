@@ -86,6 +86,16 @@ require_once 'frontend/includes/header.php';
         height: 35px;
         fill: white;
     }
+
+    /* Fix for search bar clickable issue */
+    .hero-section .container {
+        position: relative;
+        z-index: 5;
+    }
+    .hero-section form {
+        position: relative;
+        z-index: 10;
+    }
 </style>
 
 <!-- Hero Section -->

@@ -252,6 +252,22 @@ body {
     }
 }
 
+.hero-section .container {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-section form {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-section input,
+.hero-section button {
+    position: relative;
+    z-index: 10;
+}
+
 /* ========== Section Styles ========== */
 .section {
     padding: 5rem 0;
