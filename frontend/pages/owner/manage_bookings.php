@@ -62,8 +62,16 @@ $requests = $stmt->fetchAll();
                             <?php echo number_format($r['total_price'], 2); ?>
                         </td>
                         <td>
-                            <span
-                                class="badge <?php echo $r['status'] == 'pending' ? 'bg-warning text-dark' : ($r['status'] == 'approved' ? 'bg-success' : 'bg-danger'); ?>">
+                            <span class="badge <?php
+                            echo match ($r['status']) {
+                                'pending' => 'bg-warning text-dark',
+                                'approved' => 'bg-success',
+                                'rejected' => 'bg-danger',
+                                'completed' => 'bg-info text-dark',
+                                'cancelled' => 'bg-secondary',
+                                default => 'bg-light text-dark'
+                            };
+                            ?>">
                                 <?php echo ucfirst($r['status']); ?>
                             </span>
                         </td>
@@ -76,6 +84,13 @@ $requests = $stmt->fetchAll();
                                         class="btn btn-sm btn-success">Approve</button>
                                     <button type="submit" name="status" value="rejected"
                                         class="btn btn-sm btn-danger">Reject</button>
+                                </form>
+                            <?php elseif ($r['status'] === 'approved'): ?>
+                                <form action="../../../backend/controllers/booking_actions.php" method="POST" class="d-inline">
+                                    <input type="hidden" name="action" value="update_status">
+                                    <input type="hidden" name="booking_id" value="<?php echo $r['id']; ?>">
+                                    <button type="submit" name="status" value="completed"
+                                        class="btn btn-sm btn-info text-white">Mark Returned</button>
                                 </form>
                             <?php else: ?>
                                 <span class="text-muted">-</span>

@@ -10,21 +10,25 @@ if (session_status() === PHP_SESSION_NONE) {
 $search = $_GET['search'] ?? '';
 $category = $_GET['category'] ?? 'all';
 
-$sql = "SELECT * FROM equipment WHERE is_available = 1";
+$sql = "SELECT e.*, AVG(r.rating) as avg_rating, COUNT(r.id) as review_count 
+        FROM equipment e
+        LEFT JOIN bookings b ON e.id = b.equipment_id
+        LEFT JOIN reviews r ON b.id = r.booking_id
+        WHERE e.is_available = 1";
 $params = [];
 
 if ($search) {
-    $sql .= " AND (name LIKE ? OR description LIKE ?)";
+    $sql .= " AND (e.name LIKE ? OR e.description LIKE ?)";
     $params[] = "%$search%";
     $params[] = "%$search%";
 }
 
 if ($category !== 'all') {
-    $sql .= " AND category = ?";
+    $sql .= " AND e.category = ?";
     $params[] = $category;
 }
 
-$sql .= " ORDER BY created_at DESC LIMIT 8";
+$sql .= " GROUP BY e.id ORDER BY e.created_at DESC LIMIT 8";
 $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
 $equipment_list = $stmt->fetchAll();
@@ -427,9 +431,19 @@ require_once '../../includes/header.php';
                                 (isset($item['description']) ? substr($item['description'], 0, 50) . '...' : 'Agricultural Equipment')); ?>
                         </p>
                         <div class="equipment-price">
-                            <span class="price-amount">$<?php echo number_format($item['price_per_day'], 0); ?></span>
+                            <span class="price-amount">₹<?php echo number_format($item['price_per_day'], 0); ?></span>
                             <span class="price-period">/day</span>
                         </div>
+
+                        <?php if (isset($item['avg_rating']) && $item['avg_rating'] > 0): ?>
+                            <div class="mb-3 text-warning small">
+                                <?php echo str_repeat('★', round($item['avg_rating'])); ?>
+                                <?php echo str_repeat('☆', 5 - round($item['avg_rating'])); ?>
+                                <span class="text-muted ms-1">(<?php echo $item['review_count']; ?>)</span>
+                            </div>
+                        <?php else: ?>
+                            <div class="mb-3 text-muted small">No reviews yet</div>
+                        <?php endif; ?>
 
                         <?php if (isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'farmer'): ?>
                             <a href="book_equipment.php?id=<?php echo $item['id']; ?>" class="book-btn">Book Now</a>

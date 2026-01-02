@@ -46,6 +46,9 @@ if (session_status() === PHP_SESSION_NONE) {
                                     href="/agriculture-equipment-rental/frontend/pages/admin/dashboard.php">Admin Panel</a></li>
                         <?php elseif (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'owner'): ?>
                             <li class="nav-item"><a class="nav-link"
+                                    href="/agriculture-equipment-rental/frontend/pages/owner/dashboard.php">Dashboard</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link"
                                     href="/agriculture-equipment-rental/frontend/pages/owner/my_equipment.php">My Equipment</a>
                             </li>
                             <li class="nav-item"><a class="nav-link"
@@ -56,6 +59,8 @@ if (session_status() === PHP_SESSION_NONE) {
                                     href="/agriculture-equipment-rental/frontend/pages/farmer/my_bookings.php">My Bookings</a>
                             </li>
                         <?php endif; ?>
+                        <li class="nav-item"><a class="nav-link"
+                                href="/agriculture-equipment-rental/frontend/pages/profile.php">Profile</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="/agriculture-equipment-rental/frontend/pages/auth/logout.php">Logout</a></li>
                     <?php else: ?>

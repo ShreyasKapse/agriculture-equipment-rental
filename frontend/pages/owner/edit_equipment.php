@@ -35,6 +35,18 @@ if (!$item) {
                     <input type="hidden" name="equipment_id" value="<?php echo $item['id']; ?>">
 
                     <div class="mb-3">
+                        <label>Category</label>
+                        <select name="category" class="form-select" required>
+                            <option value="tractors" <?php echo ($item['category'] ?? '') === 'tractors' ? 'selected' : ''; ?>>Tractors</option>
+                            <option value="harvesters" <?php echo ($item['category'] ?? '') === 'harvesters' ? 'selected' : ''; ?>>Harvesters</option>
+                            <option value="seeders" <?php echo ($item['category'] ?? '') === 'seeders' ? 'selected' : ''; ?>>Seeders</option>
+                            <option value="irrigation" <?php echo ($item['category'] ?? '') === 'irrigation' ? 'selected' : ''; ?>>Irrigation</option>
+                            <option value="trailers" <?php echo ($item['category'] ?? '') === 'trailers' ? 'selected' : ''; ?>>Trailers</option>
+                            <option value="other" <?php echo ($item['category'] ?? '') === 'other' ? 'selected' : ''; ?>>
+                                Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label>Equipment Name</label>
                         <input type="text" name="name" class="form-control"
                             value="<?php echo htmlspecialchars($item['name']); ?>" required>

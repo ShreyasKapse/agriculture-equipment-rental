@@ -103,45 +103,51 @@ require_once '../includes/header.php';
         <p class="section-subtitle">Meet the developers behind this project</p>
 
         <div class="row g-4 justify-content-center">
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
                     <div class="mb-3">
-                        <div
-                            style="width: 120px; height: 120px; background: linear-gradient(135deg, #66BB6A, #2E7D32); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
-                            👨‍💻
-                        </div>
+                        <img src="../assets/images/samiksha.jpeg" alt="Samiksha Sachin Salunke"
+                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">[Team Member 1]</h5>
+                    <h5 class="mb-1">Samiksha Sachin Salunke</h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
-                    <p class="small text-secondary">Computer Engineering Student<br>[Your College Name]</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>samikshasalunke1@gmail.com</p>
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
                     <div class="mb-3">
-                        <div
-                            style="width: 120px; height: 120px; background: linear-gradient(135deg, #66BB6A, #2E7D32); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
-                            👨‍💻
-                        </div>
+                        <img src="../assets/images/prachi.jpeg" alt="Prachi Mohan Deokate"
+                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">[Team Member 2]</h5>
+                    <h5 class="mb-1">Prachi Mohan Deokate</h5>
                     <p class="text-muted mb-2">Backend Developer</p>
-                    <p class="small text-secondary">Computer Engineering Student<br>[Your College Name]</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>prachi48@gmail.com</p>
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
                     <div class="mb-3">
-                        <div
-                            style="width: 120px; height: 120px; background: linear-gradient(135deg, #66BB6A, #2E7D32); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
-                            👨‍💻
-                        </div>
+                        <img src="../assets/images/rinku.jpeg" alt="Rinku Babasaheb Aade"
+                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">[Team Member 3]</h5>
+                    <h5 class="mb-1">Rinku Babasaheb Aade</h5>
+                    <p class="text-muted mb-2">Frontend Developer</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>rinkuade5257@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="material-card text-center p-4">
+                    <div class="mb-3">
+                        <img src="../assets/images/hridhima.jpeg" alt="Hridhima Deepak Gadekar"
+                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    </div>
+                    <h5 class="mb-1">Hridhima Deepak Gadekar</h5>
                     <p class="text-muted mb-2">Database Designer</p>
-                    <p class="small text-secondary">Computer Engineering Student<br>[Your College Name]</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>hridhima.gadekar@gmail.com</p>
                 </div>
             </div>
         </div>

@@ -18,6 +18,17 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'owner') {
                     enctype="multipart/form-data">
                     <input type="hidden" name="action" value="add">
                     <div class="mb-3">
+                        <label>Category</label>
+                        <select name="category" class="form-select" required>
+                            <option value="tractors">Tractors</option>
+                            <option value="harvesters">Harvesters</option>
+                            <option value="seeders">Seeders</option>
+                            <option value="irrigation">Irrigation</option>
+                            <option value="trailers">Trailers</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label>Equipment Name</label>
                         <input type="text" name="name" class="form-control" required>
                     </div>

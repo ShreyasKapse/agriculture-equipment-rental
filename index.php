@@ -96,6 +96,19 @@ require_once 'frontend/includes/header.php';
                 <h1 class="hero-title" style="font-size: 3.5rem;">Rent Agricultural Equipment Easily</h1>
                 <p class="hero-subtitle" style="font-size: 1.3rem;">Connecting farmers with the machinery they need to
                     grow effectively and affordably. Join our community today.</p>
+
+                <!-- Search Bar -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-8">
+                        <form action="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php"
+                            method="GET" class="d-flex">
+                            <input type="text" name="search" class="form-control form-control-lg me-2"
+                                placeholder="Search for tractors, seeders..." aria-label="Search">
+                            <button class="btn btn-success btn-lg" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="mt-4">
                     <a href="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php"
                         class="btn btn-light btn-lg me-3 mb-2">

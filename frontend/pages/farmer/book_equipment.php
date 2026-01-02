@@ -22,6 +22,27 @@ if (!$item) {
     echo "Equipment not found.";
     exit;
 }
+
+// Fetch Reviews
+$reviewStmt = $pdo->prepare("
+    SELECT r.rating, r.comment, r.created_at, u.full_name 
+    FROM reviews r 
+    JOIN bookings b ON r.booking_id = b.id 
+    JOIN users u ON b.farmer_id = u.id 
+    WHERE b.equipment_id = ? 
+    ORDER BY r.created_at DESC
+");
+$reviewStmt->execute([$id]);
+$reviews = $reviewStmt->fetchAll();
+
+$avgRating = 0;
+if (count($reviews) > 0) {
+    $total = 0;
+    foreach ($reviews as $rev) {
+        $total += $rev['rating'];
+    }
+    $avgRating = round($total / count($reviews), 1);
+}
 ?>
 
 <div class="row justify-content-center">
@@ -46,6 +67,15 @@ if (!$item) {
                         <h4 class="text-primary">₹<span id="pricePerDay">
                                 <?php echo $item['price_per_day']; ?>
                             </span> / day</h4>
+
+                        <?php if ($avgRating > 0): ?>
+                            <div class="mt-2">
+                                <span class="text-warning fs-5">
+                                    <?php echo str_repeat('★', floor($avgRating)); ?>    <?php echo ($avgRating - floor($avgRating) >= 0.5) ? '½' : ''; ?>
+                                </span>
+                                <span class="text-muted small">(<?php echo count($reviews); ?> reviews)</span>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="col-md-7">
                         <form action="../../../backend/controllers/booking_actions.php" method="POST">
@@ -72,6 +102,43 @@ if (!$item) {
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reviews Section -->
+<div class="row justify-content-center mt-5 mb-5">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-light">
+                <h4 class="mb-0">Reviews (<?php echo count($reviews); ?>)
+                    <?php if ($avgRating > 0): ?>
+                        <span class="text-warning float-end">
+                            <?php echo $avgRating; ?> ★
+                        </span>
+                    <?php endif; ?>
+                </h4>
+            </div>
+            <div class="card-body">
+                <?php if (count($reviews) > 0): ?>
+                    <?php foreach ($reviews as $rev): ?>
+                        <div class="border-bottom pb-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="mb-1 fw-bold"><?php echo htmlspecialchars($rev['full_name']); ?></h6>
+                                <span class="badge bg-light text-dark border">
+                                    <?php echo $rev['rating']; ?> <span class="text-warning">★</span>
+                                </span>
+                            </div>
+                            <small class="text-muted d-block mb-2">
+                                <?php echo date('d M Y', strtotime($rev['created_at'])); ?>
+                            </small>
+                            <p class="mb-0"><?php echo htmlspecialchars($rev['comment']); ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                   <p class="text-muted text-center py-3">No reviews yet. Be the first to rent and review!</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
