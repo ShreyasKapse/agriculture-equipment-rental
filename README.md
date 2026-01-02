@@ -22,6 +22,8 @@ Three-Tier Architecture:
 5. Start Apache & MySQL
 
 ## Documentation
+- 👨‍💻 **[Detailed Code Reference](docs/DetailedCodeReference.md)** (Line-by-line explanation)
+- 📝 **[Code Explanation](docs/CodeExplanation.md)** (Overview)
 - [User Manual](docs/UserManual.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Database Schema](docs/DATABASE.md)
