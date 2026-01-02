@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS equipment (
     id INT AUTO_INCREMENT PRIMARY KEY,
     owner_id INT NOT NULL,
     name VARCHAR(150) NOT NULL,
+    category VARCHAR(100) NOT NULL,
     description TEXT,
     image_url VARCHAR(255),
     price_per_day DECIMAL(10, 2) NOT NULL,
