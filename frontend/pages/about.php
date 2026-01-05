@@ -109,9 +109,9 @@ require_once '../includes/header.php';
                         <img src="../assets/images/samiksha.jpeg" alt="Samiksha Sachin Salunke"
                             style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">Samiksha Sachin Salunke</h5>
+                    <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
-                    <p class="small text-secondary">Diploma in Computer Engineering<br>samikshasalunke1@gmail.com</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>xyz@gmail.com</p>
                 </div>
             </div>
 
@@ -121,9 +121,9 @@ require_once '../includes/header.php';
                         <img src="../assets/images/prachi.jpeg" alt="Prachi Mohan Deokate"
                             style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">Prachi Mohan Deokate</h5>
+                    <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Backend Developer</p>
-                    <p class="small text-secondary">Diploma in Computer Engineering<br>prachi48@gmail.com</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>xyz@gmail.com</p>
                 </div>
             </div>
 
@@ -133,9 +133,9 @@ require_once '../includes/header.php';
                         <img src="../assets/images/rinku.jpeg" alt="Rinku Babasaheb Aade"
                             style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">Rinku Babasaheb Aade</h5>
+                    <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Frontend Developer</p>
-                    <p class="small text-secondary">Diploma in Computer Engineering<br>rinkuade5257@gmail.com</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>xyz@gmail.com</p>
                 </div>
             </div>
 
@@ -145,9 +145,9 @@ require_once '../includes/header.php';
                         <img src="../assets/images/hridhima.jpeg" alt="Hridhima Deepak Gadekar"
                             style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     </div>
-                    <h5 class="mb-1">Hridhima Deepak Gadekar</h5>
+                    <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Database Designer</p>
-                    <p class="small text-secondary">Diploma in Computer Engineering<br>hridhima.gadekar@gmail.com</p>
+                    <p class="small text-secondary">Diploma in Computer Engineering<br>xyz@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@ require_once '../includes/header.php';
                     </div>
                     <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Professor</p>
-                    <p class="small text-secondary">Computer Engineering<br>JSPM</p>
+                    <p class="small text-secondary">Computer Engineering<br>XYZ</p>
                 </div>
             </div>
         </div>
