@@ -64,7 +64,7 @@ if (!$item) {
                     <div class="mb-3">
                         <label>Current Image</label><br>
                         <?php if ($item['image_url']): ?>
-                            <img src="/agriculture-equipment-rental/<?php echo htmlspecialchars($item['image_url']); ?>"
+                            <img src="<?php echo BASE_URL; ?>/<?php echo htmlspecialchars($item['image_url']); ?>"
                                 width="100" class="mb-2">
                         <?php else: ?>
                             <p>No image uploaded.</p>

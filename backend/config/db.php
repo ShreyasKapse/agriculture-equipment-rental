@@ -1,10 +1,10 @@
 <?php
 // backend/config/db.php
 
-$host = 'localhost';
-$db_name = 'agriculture_rental_db';
-$username = 'root';
-$password = ''; // Default XAMPP password
+$host = getenv('DB_HOST') ?: 'localhost';
+$db_name = getenv('DB_NAME') ?: 'agriculture_rental_db';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASS') !== false ? getenv('DB_PASS') : ''; // Default XAMPP password is empty
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);

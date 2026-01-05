@@ -36,8 +36,8 @@ $equipment_list = $stmt->fetchAll();
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <?php if ($item['image_url']): ?>
-                        <img src="/agriculture-equipment-rental/<?php echo htmlspecialchars($item['image_url']); ?>"
-                            class="card-img-top" alt="Equipment Image" style="height: 200px; object-fit: cover;">
+                        <img src="<?php echo BASE_URL; ?>/<?php echo htmlspecialchars($item['image_url']); ?>" class="card-img-top"
+                            alt="Equipment Image" style="height: 200px; object-fit: cover;">
                     <?php else: ?>
                         <div class="bg-secondary text-white d-flex align-items-center justify-content-center"
                             style="height: 200px;">No Image</div>

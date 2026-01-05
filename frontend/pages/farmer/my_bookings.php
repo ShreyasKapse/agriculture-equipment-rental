@@ -50,23 +50,23 @@ $bookings = $stmt->fetchAll();
                         <td>
                             <div class="d-flex align-items-center">
                                 <?php if ($b['image_url']): ?>
-                                    <img src="/agriculture-equipment-rental/<?php echo htmlspecialchars($b['image_url']); ?>"
-                                        width="50" class="me-2 rounded">
+                                    <img src="<?php echo BASE_URL; ?>/<?php echo htmlspecialchars($b['image_url']); ?>" width="50"
+                                        class="me-2 rounded">
                                 <?php endif; ?>
                                 <?php echo htmlspecialchars($b['equipment_name']); ?>
                             </div>
-                                </td>
-                                <td>
-                                    <strong><?php echo htmlspecialchars($b['owner_name']); ?></strong>
-                                    <?php if (in_array($b['status'], ['approved', 'completed'])): ?>
-                                            <br>
-                                            <small class="text-muted">
-                                                📞 <?php echo htmlspecialchars($b['owner_phone']); ?><br>
-                                                📍 <?php echo htmlspecialchars($b['owner_address']); ?>
-                                            </small>
-                                    <?php else: ?>
-                                            <br><small class="text-muted fst-italic">Contact info hidden</small>
-                                    <?php endif; ?>
+                        </td>
+                        <td>
+                            <strong><?php echo htmlspecialchars($b['owner_name']); ?></strong>
+                            <?php if (in_array($b['status'], ['approved', 'completed'])): ?>
+                                <br>
+                                <small class="text-muted">
+                                    📞 <?php echo htmlspecialchars($b['owner_phone']); ?><br>
+                                    📍 <?php echo htmlspecialchars($b['owner_address']); ?>
+                                </small>
+                            <?php else: ?>
+                                <br><small class="text-muted fst-italic">Contact info hidden</small>
+                            <?php endif; ?>
                         </td>
                         <td>
                             <?php echo $b['start_date']; ?> to

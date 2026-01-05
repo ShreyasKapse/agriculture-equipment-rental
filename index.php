@@ -6,7 +6,7 @@ require_once 'frontend/includes/header.php';
 <style>
     .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url('/agriculture-equipment-rental/frontend/assets/images/hero-tractor.png');
+            url('<?php echo BASE_URL; ?>/frontend/assets/images/hero-tractor.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -92,6 +92,7 @@ require_once 'frontend/includes/header.php';
         position: relative;
         z-index: 5;
     }
+
     .hero-section form {
         position: relative;
         z-index: 10;
@@ -110,8 +111,8 @@ require_once 'frontend/includes/header.php';
                 <!-- Search Bar -->
                 <div class="row justify-content-center mt-4">
                     <div class="col-md-8">
-                        <form action="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php"
-                            method="GET" class="d-flex">
+                        <form action="<?php echo BASE_URL; ?>/frontend/pages/farmer/browse_equipment.php" method="GET"
+                            class="d-flex">
                             <input type="text" name="search" class="form-control form-control-lg me-2"
                                 placeholder="Search for tractors, seeders..." aria-label="Search">
                             <button class="btn btn-success btn-lg" type="submit">Search</button>
@@ -120,11 +121,11 @@ require_once 'frontend/includes/header.php';
                 </div>
 
                 <div class="mt-4">
-                    <a href="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php"
+                    <a href="<?php echo BASE_URL; ?>/frontend/pages/farmer/browse_equipment.php"
                         class="btn btn-light btn-lg me-3 mb-2">
                         View Equipment
                     </a>
-                    <a href="/agriculture-equipment-rental/frontend/pages/auth/register.php"
+                    <a href="<?php echo BASE_URL; ?>/frontend/pages/auth/register.php"
                         class="btn btn-outline-light btn-lg mb-2">
                         Register as Owner
                     </a>
@@ -192,14 +193,14 @@ require_once 'frontend/includes/header.php';
                 <h2 class="section-title" style="text-align: left; margin-bottom: 0;">Equipment Categories</h2>
                 <p class="section-subtitle" style="text-align: left; margin-bottom: 0;">Browse equipment by category</p>
             </div>
-            <a href="/agriculture-equipment-rental/frontend/pages/farmer/browse_equipment.php"
-                class="btn btn-primary">View All</a>
+            <a href="<?php echo BASE_URL; ?>/frontend/pages/farmer/browse_equipment.php" class="btn btn-primary">View
+                All</a>
         </div>
 
         <div class="row g-4">
             <div class="col-md-3 col-sm-6">
                 <div class="category-card">
-                    <img src="/agriculture-equipment-rental/frontend/assets/images/tractor-category.png" alt="Tractors"
+                    <img src="<?php echo BASE_URL; ?>/frontend/assets/images/tractor-category.png" alt="Tractors"
                         class="category-card-img">
                     <div class="category-card-content">
                         <h4>Tractors</h4>
@@ -209,8 +210,8 @@ require_once 'frontend/includes/header.php';
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="category-card">
-                    <img src="/agriculture-equipment-rental/frontend/assets/images/harvester-category.png"
-                        alt="Harvesters" class="category-card-img">
+                    <img src="<?php echo BASE_URL; ?>/frontend/assets/images/harvester-category.png" alt="Harvesters"
+                        class="category-card-img">
                     <div class="category-card-content">
                         <h4>Harvesters</h4>
                         <p class="text-muted mb-0">Efficient crop cutting</p>
@@ -219,7 +220,7 @@ require_once 'frontend/includes/header.php';
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="category-card">
-                    <img src="/agriculture-equipment-rental/frontend/assets/images/plough-category.png" alt="Ploughs"
+                    <img src="<?php echo BASE_URL; ?>/frontend/assets/images/plough-category.png" alt="Ploughs"
                         class="category-card-img">
                     <div class="category-card-content">
                         <h4>Ploughs</h4>
@@ -229,7 +230,7 @@ require_once 'frontend/includes/header.php';
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="category-card">
-                    <img src="/agriculture-equipment-rental/frontend/assets/images/seeder-category.png" alt="Seeders"
+                    <img src="<?php echo BASE_URL; ?>/frontend/assets/images/seeder-category.png" alt="Seeders"
                         class="category-card-img">
                     <div class="category-card-content">
                         <h4>Seeders</h4>
@@ -306,7 +307,7 @@ require_once 'frontend/includes/header.php';
     <div class="container text-center">
         <h2 class="display-4 fw-bold mb-3">Ready to Boost Your Harvest?</h2>
         <p class="lead mb-4">Join thousands of farmers using AERS to access the best equipment for their land</p>
-        <a href="/agriculture-equipment-rental/frontend/pages/auth/register.php" class="btn btn-light btn-lg">
+        <a href="<?php echo BASE_URL; ?>/frontend/pages/auth/register.php" class="btn btn-light btn-lg">
             Start Renting Today
         </a>
     </div>

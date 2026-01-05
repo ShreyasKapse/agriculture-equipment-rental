@@ -53,7 +53,7 @@ if (count($reviews) > 0) {
                 <div class="row">
                     <div class="col-md-5">
                         <?php if ($item['image_url']): ?>
-                            <img src="/agriculture-equipment-rental/<?php echo htmlspecialchars($item['image_url']); ?>"
+                            <img src="<?php echo BASE_URL; ?>/<?php echo htmlspecialchars($item['image_url']); ?>"
                                 class="img-fluid rounded mb-3">
                         <?php else: ?>
                             <div class="bg-light text-center py-5 mb-3">No Image</div>
@@ -71,7 +71,8 @@ if (count($reviews) > 0) {
                         <?php if ($avgRating > 0): ?>
                             <div class="mt-2">
                                 <span class="text-warning fs-5">
-                                    <?php echo str_repeat('★', floor($avgRating)); ?>    <?php echo ($avgRating - floor($avgRating) >= 0.5) ? '½' : ''; ?>
+                                    <?php echo str_repeat('★', floor($avgRating)); ?>
+                                    <?php echo ($avgRating - floor($avgRating) >= 0.5) ? '½' : ''; ?>
                                 </span>
                                 <span class="text-muted small">(<?php echo count($reviews); ?> reviews)</span>
                             </div>
@@ -137,7 +138,7 @@ if (count($reviews) > 0) {
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
-                   <p class="text-muted text-center py-3">No reviews yet. Be the first to rent and review!</p>
+                    <p class="text-muted text-center py-3">No reviews yet. Be the first to rent and review!</p>
                 <?php endif; ?>
             </div>
         </div>

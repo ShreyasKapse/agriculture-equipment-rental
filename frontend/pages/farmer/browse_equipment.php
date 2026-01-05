@@ -41,7 +41,7 @@ $sample_equipment = [
         'category' => 'tractors',
         'specs' => '50 HP • 2021 Model',
         'price_per_day' => 120,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/john-deere-5050d.png',
+        'image' => BASE_URL . '/frontend/assets/images/john-deere-5050d.png',
         'available' => true
     ],
     [
@@ -50,7 +50,7 @@ $sample_equipment = [
         'category' => 'tractors',
         'specs' => '42 HP • 2020 Model',
         'price_per_day' => 95,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/tractor-category.png',
+        'image' => BASE_URL . '/frontend/assets/images/tractor-category.png',
         'available' => true
     ],
     [
@@ -59,7 +59,7 @@ $sample_equipment = [
         'category' => 'harvesters',
         'specs' => 'High Capacity • 2022',
         'price_per_day' => 350,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/new-holland-combine.png',
+        'image' => BASE_URL . '/frontend/assets/images/new-holland-combine.png',
         'available' => true
     ],
     [
@@ -68,7 +68,7 @@ $sample_equipment = [
         'category' => 'seeders',
         'specs' => 'Precision Drill • 6 Rows',
         'price_per_day' => 85,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/kverneland-seeder.png',
+        'image' => BASE_URL . '/frontend/assets/images/kverneland-seeder.png',
         'available' => true
     ],
     [
@@ -77,7 +77,7 @@ $sample_equipment = [
         'category' => 'irrigation',
         'specs' => 'Mobile Unit • 500m Reach',
         'price_per_day' => 200,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/pivot-irrigation.png',
+        'image' => BASE_URL . '/frontend/assets/images/pivot-irrigation.png',
         'available' => true
     ],
     [
@@ -86,7 +86,7 @@ $sample_equipment = [
         'category' => 'trailers',
         'specs' => '10 Ton Capacity • Hydraulic',
         'price_per_day' => 60,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/heavy-duty-trailer.png',
+        'image' => BASE_URL . '/frontend/assets/images/heavy-duty-trailer.png',
         'available' => true
     ],
     [
@@ -95,7 +95,7 @@ $sample_equipment = [
         'category' => 'tractors',
         'specs' => 'Vineyard Specialist • 24 HP',
         'price_per_day' => 70,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/mahindra-jivo.png',
+        'image' => BASE_URL . '/frontend/assets/images/mahindra-jivo.png',
         'available' => true
     ],
     [
@@ -104,7 +104,7 @@ $sample_equipment = [
         'category' => 'tractors',
         'specs' => 'Premium Tech • 140 HP',
         'price_per_day' => 250,
-        'image' => '/agriculture-equipment-rental/frontend/assets/images/fendt-700-vario.png',
+        'image' => BASE_URL . '/frontend/assets/images/fendt-700-vario.png',
         'available' => true
     ]
 ];
@@ -414,8 +414,8 @@ require_once '../../includes/header.php';
                 <div class="equipment-card">
                     <?php
                     $image_url = isset($item['image']) ? $item['image'] :
-                        (isset($item['image_url']) ? '/agriculture-equipment-rental/' . $item['image_url'] :
-                            '/agriculture-equipment-rental/frontend/assets/images/tractor-category.png');
+                        (isset($item['image_url']) ? BASE_URL . '/' . $item['image_url'] :
+                            BASE_URL . '/frontend/assets/images/tractor-category.png');
                     ?>
                     <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>"
                         class="equipment-image">
