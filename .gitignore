@@ -1,19 +1,27 @@
-# Environment files
+# Environment & Config
 .env
+backend/config/prod_config.php
 
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # IDE
 .vscode/
 .idea/
+*.swp
 
-# Logs
+# Logs & Debug
 *.log
+error_log
+debug.php
+debug_browse.php
+hello.php
 
 # Dependencies (if any later)
 vendor/
+node_modules/
 
 # Cache
 cache/
