@@ -1,0 +1,9 @@
+{
+    "name": "shreyas/agriculture-rental",
+    "description": "Agriculture Equipment Rental System",
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    }
+}
