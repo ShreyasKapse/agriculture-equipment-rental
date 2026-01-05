@@ -1,8 +1,8 @@
 -- Database Schema for Agriculture Equipment Rental System
 
 -- Create Database
-CREATE DATABASE IF NOT EXISTS agriculture_rental_db;
-USE agriculture_rental_db;
+-- CREATE DATABASE IF NOT EXISTS agriculture_rental_db;
+-- USE agriculture_rental_db;
 
 -- 1. Users Table
 -- Stores all user types: Farmer, Owner, Admin

@@ -1,6 +1,7 @@
 <?php
 // frontend/pages/farmer/browse_equipment.php
 require_once '../../../backend/config/db.php';
+require_once '../../../backend/config/config.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

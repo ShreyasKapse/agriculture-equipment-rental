@@ -10,8 +10,14 @@
 $baseUrl = getenv('APP_URL');
 
 if ($baseUrl === false) {
-    // Localhost fallback
-    $baseUrl = '/agriculture-equipment-rental';
+    // Auto-detect environment
+    if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1') {
+        // Localhost: keeps the subfolder path
+        $baseUrl = '/agriculture-equipment-rental';
+    } else {
+        // Production (InfinityFree/Shared Hosting): assumes site is at root
+        $baseUrl = '';
+    }
 }
 
 define('BASE_URL', $baseUrl);
