@@ -1,10 +1,22 @@
 <?php
 // backend/config/db.php
 
-$host = getenv('DB_HOST') ?: 'localhost';
-$db_name = getenv('DB_NAME') ?: 'agriculture_rental_db';
-$username = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASS') !== false ? getenv('DB_PASS') : ''; // Default XAMPP password is empty
+// 1. Try to load production config (manual file on server)
+// Create 'prod_config.php' in this same folder on your server with your real credentials
+$prodConfigFile = __DIR__ . '/prod_config.php';
+if (file_exists($prodConfigFile)) {
+    require_once $prodConfigFile;
+}
+
+// 2. Fallback: If variables aren't set by prod_config, use Environment or Local defaults
+if (!isset($host))
+    $host = getenv('DB_HOST') ?: 'localhost';
+if (!isset($db_name))
+    $db_name = getenv('DB_NAME') ?: 'agriculture_rental_db';
+if (!isset($username))
+    $username = getenv('DB_USER') ?: 'root';
+if (!isset($password))
+    $password = getenv('DB_PASS') !== false ? getenv('DB_PASS') : '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);
