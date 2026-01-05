@@ -105,9 +105,9 @@ require_once '../includes/header.php';
         <div class="row g-4 justify-content-center">
             <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
-                    <div class="mb-3">
-                        <img src="../assets/images/samiksha.jpeg" alt="Samiksha Sachin Salunke"
-                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div
+                        style="width: 100px; height: 100px; background: var(--primary-green); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">
+                        👨
                     </div>
                     <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
@@ -117,9 +117,9 @@ require_once '../includes/header.php';
 
             <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
-                    <div class="mb-3">
-                        <img src="../assets/images/prachi.jpeg" alt="Prachi Mohan Deokate"
-                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div
+                        style="width: 100px; height: 100px; background: var(--primary-green); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">
+                        👨
                     </div>
                     <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Backend Developer</p>
@@ -129,9 +129,9 @@ require_once '../includes/header.php';
 
             <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
-                    <div class="mb-3">
-                        <img src="../assets/images/rinku.jpeg" alt="Rinku Babasaheb Aade"
-                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div
+                        style="width: 100px; height: 100px; background: var(--primary-green); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">
+                        👨
                     </div>
                     <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Frontend Developer</p>
@@ -141,9 +141,9 @@ require_once '../includes/header.php';
 
             <div class="col-md-3 col-sm-6">
                 <div class="material-card text-center p-4">
-                    <div class="mb-3">
-                        <img src="../assets/images/hridhima.jpeg" alt="Hridhima Deepak Gadekar"
-                            style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; display: block; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div
+                        style="width: 100px; height: 100px; background: var(--primary-green); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">
+                        👨
                     </div>
                     <h5 class="mb-1">XYZ</h5>
                     <p class="text-muted mb-2">Database Designer</p>
@@ -185,7 +185,7 @@ require_once '../includes/header.php';
                     <h5 class="mb-3">Academic Project</h5>
                     <p class="mb-2"><strong>Academic Year:</strong> 2025-2026</p>
                     <p class="mb-2"><strong>Program:</strong> Diploma in Computer Engineering</p>
-                    <p class="mb-0"><strong>Institution:</strong> JSPM</p>
+                    <p class="mb-0"><strong>Institution:</strong> </p>
                 </div>
             </div>
         </div>
